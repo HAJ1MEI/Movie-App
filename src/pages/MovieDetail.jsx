@@ -86,7 +86,7 @@ const MovieDetails = () => {
           {cast.map((member) => (
             <div key={member.id} className="col-md-2 text-center mb-3">
               <img src={`${IMAGE_URL}${member.profile_path}`} alt={member.name} className="rounded-circle" style={{ width: '120px', height: '120px', objectFit: 'cover' }} />
-              <p className="mt-2 text-truncate" style={{ maxWidth: '120px' }}>{member.name}</p>
+              <p className="mt-2 text-truncate text-center" style={{ maxWidth: '120px' }}>{member.name}</p>
             </div>
           ))}
         </div>

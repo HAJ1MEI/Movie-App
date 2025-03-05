@@ -7,9 +7,12 @@ import MovieDetail from './pages/MovieDetail'
 import SearchResult from './pages/SearchResult'
 import TopRated from './pages/TopRated'
 import Upcoming from './pages/Upcoming'
+import Favorite from "./pages/Favorite";
+import { FavoriteProvider } from './context/FavoriteContext'
 
 function App() {
   return (
+    <FavoriteProvider>
     <Router>
       <Navbar />
       <div className="container mt-4">
@@ -18,10 +21,12 @@ function App() {
           <Route path="/top-rated" element={<TopRated />} />
           <Route path="/upcoming" element={<Upcoming />} />
           <Route path="/movie/:id" element={<MovieDetail />} />
-          <Route path="/search" element={<SearchResult />} /> 
+          <Route path="/search" element={<SearchResult />} />
+          <Route path="/favorites" element={<Favorite />} /> 
         </Routes>
       </div>
     </Router>
+    </FavoriteProvider>
   )
 }
 

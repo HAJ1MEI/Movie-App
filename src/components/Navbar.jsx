@@ -33,6 +33,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/upcoming">Upcoming</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/favorites">Favorites</Link>
+            </li>
           </ul>
           <form className="d-flex" onSubmit={handleSearch}>
             <input
